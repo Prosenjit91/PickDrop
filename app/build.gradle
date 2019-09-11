@@ -1,0 +1,64 @@
+apply plugin: 'com.android.application'
+
+apply plugin: 'kotlin-android'
+
+apply plugin: 'kotlin-android-extensions'
+
+android {
+    compileSdkVersion 29
+    buildToolsVersion "29.0.0"
+    defaultConfig {
+        applicationId "com.prosenjit.pickndrop"
+        minSdkVersion 19
+        targetSdkVersion 29
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        android.defaultConfig.vectorDrawables.useSupportLibrary = true
+        multiDexEnabled true
+
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    implementation 'androidx.appcompat:appcompat:1.0.2'
+    implementation 'androidx.core:core-ktx:1.0.2'
+    implementation 'com.google.android.material:material:1.0.0'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'androidx.test:runner:1.2.0'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+    /*for firebase*/
+    implementation 'com.google.firebase:firebase-core:17.1.0'
+    implementation 'com.google.firebase:firebase-auth:19.0.0'
+    implementation 'com.google.firebase:firebase-messaging:20.0.0'
+    /*For Google*/
+    implementation 'com.google.android.gms:play-services-maps:17.0.0'
+    implementation 'com.google.android.gms:play-services-location:17.0.0'
+    implementation 'com.google.android.gms:play-services-places:17.0.0'
+    implementation 'com.google.android.libraries.places:places:2.0.0'
+    /*For network call*/
+    implementation 'com.github.bumptech.glide:okhttp3-integration:4.8.0'
+    implementation 'com.google.code.gson:gson:2.8.5'
+    /*For view animation(Shaking view on error)*/
+    implementation 'com.daimajia.androidanimations:library:2.3@aar'
+    /*For progressbar*/
+    implementation 'com.wang.avi:library:2.1.3'
+    /*for material edit text*/
+    implementation 'com.rengwuxian.materialedittext:library:2.1.4'
+    /*otp view edittext*/
+    implementation 'com.github.mukeshsolanki:android-otpview-pinview:2.0.3'
+    /*circular count down timer*/
+    implementation 'com.github.douglasspgyn:CircularCountdown:0.3.0'
+    implementation 'com.seatgeek:placesautocomplete:0.3-SNAPSHOT'
+
+}
+apply plugin: 'com.google.gms.google-services'

@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardElevation="10dp"
+    >
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_margin="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_gravity="center_horizontal"
+                  android:textSize="20dp"
+                  android:textColor="@color/colordeepblue"
+                  android:text="    SIGN UP\n For Merchent"
+                  android:textStyle="bold"/>
+
+        <com.rengwuxian.materialedittext.MaterialEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/edtName"
+                android:hint="Enter name"
+                android:inputType="textCapWords"
+                android:text=""
+                android:textColor="@color/colorBlack"
+                android:textColorHint="@color/colorBlack"
+                android:textSize="20sp"
+                app:met_singleLineEllipsis="true"
+                app:met_baseColor="@color/colordeepblue"
+                app:met_floatingLabel="highlight"
+                app:met_primaryColor="@color/colordeepblue"
+
+        />
+       <LinearLayout android:layout_width="match_parent"
+                     android:layout_height="wrap_content"
+                     android:layout_marginTop="10dp"
+                     android:orientation="horizontal">
+           <com.rengwuxian.materialedittext.MaterialEditText
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:enabled="false"
+                   android:clickable="false"
+                   android:focusable="false"
+                   android:hint="Code"
+                   android:inputType="phone"
+                   android:text="+91"
+                   android:textColor="@color/colorBlack"
+                   android:textColorHint="@color/colorBlack"
+                   android:textSize="15sp"
+                   app:met_singleLineEllipsis="true"
+                   app:met_baseColor="@color/colordeepblue"
+                   app:met_floatingLabel="highlight"
+                   app:met_primaryColor="@color/colordeepblue"/>
+           <com.rengwuxian.materialedittext.MaterialEditText
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:id="@+id/edtPhone"
+                   android:hint="Enter Phone"
+                   android:inputType="phone"
+                   android:text=""
+                   android:textColor="@color/colorBlack"
+                   android:textColorHint="@color/colorBlack"
+                   android:textSize="20sp"
+                   android:layout_marginLeft="10dp"
+                   app:met_singleLineEllipsis="true"
+                   app:met_baseColor="@color/colordeepblue"
+                   app:met_floatingLabel="highlight"
+                   app:met_primaryColor="@color/colordeepblue"/>
+       </LinearLayout>
+       <LinearLayout android:layout_width="match_parent"
+                     android:layout_height="wrap_content"
+                     android:orientation="vertical"
+                     android:visibility="gone"
+                     android:id="@+id/lnOtpView">
+           <com.mukesh.OtpView
+                   android:id="@+id/otp_view"
+                   android:layout_width="wrap_content"
+                   android:layout_height="40dp"
+                   android:inputType="number"
+                   android:layout_gravity="center"
+                   android:itemBackground="@color/colordeepblue"
+                   android:textColor="@android:color/white"
+                   app:hideLineWhenFilled="false"
+                   app:itemCount="6"
+                   app:lineColor="@color/colorwhite"
+                   app:viewType="rectangle"
+                   android:visibility="visible"/>
+           <LinearLayout android:layout_width="match_parent"
+                         android:layout_height="wrap_content"
+                         android:orientation="horizontal"
+                         android:layout_marginTop="8dp">
+               <douglasspgyn.com.github.circularcountdown.CircularCountdown
+                       android:id="@+id/circularCountdown"
+                       android:layout_width="40dp"
+                       android:layout_height="40dp"
+                       app:countdownBackgroundColor="@color/colorAccent"
+                       app:countdownForegroundColor="@android:color/holo_red_light"
+                       app:countdownTextColor="@android:color/holo_red_dark"
+                       app:countdownTextSize="15sp" />
+               <TextView android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:textColor="@color/colordeepblue"
+                         android:layout_marginLeft="10dp"
+                         android:layout_gravity="center_vertical"
+                         android:textStyle="bold"
+                         android:textSize="15dp"
+                         android:text=""
+                         android:id="@+id/tv_otpresult"/>
+               <TextView android:id="@+id/tvResend"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:textStyle="bold|italic"
+                       android:text="Resend"
+                       android:textSize="15dp"
+                       android:layout_marginLeft="40dp"
+                       android:layout_gravity="center_vertical"
+                       android:textColor="@color/colordeepblue"
+                       android:visibility="gone"/>
+           </LinearLayout>
+
+       </LinearLayout>
+        <com.rengwuxian.materialedittext.MaterialEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/edtPassword"
+            android:hint="Enter password"
+            android:inputType="textPassword"
+            android:text=""
+            android:textColor="@color/colorBlack"
+            android:textColorHint="@color/colorBlack"
+            android:textSize="20sp"
+            android:layout_marginTop="10dp"
+            app:met_singleLineEllipsis="true"
+            app:met_baseColor="@color/colordeepblue"
+            app:met_floatingLabel="highlight"
+            app:met_primaryColor="@color/colordeepblue"
+
+            />
+
+
+
+
+        <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/btnRegister"
+                android:textColor="@color/colorBlack"
+                android:text="Sign Up"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/btn_sign_in_background"
+                android:layout_marginTop="10dp"
+                android:padding="10dp"
+                android:layout_weight="1"/>
+
+        <TextView android:id="@+id/tv_signin"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_gravity="center_horizontal"
+                  android:layout_marginTop="15dp"
+                  android:textStyle="bold|italic"
+                  android:textSize="15dp"
+                  android:padding="10dp"
+                  android:text="Already a member? Log In"
+                  android:textColor="@color/colordeepblue"/>
+        <com.wang.avi.AVLoadingIndicatorView
+                android:id="@+id/avi_progress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:indicatorColor="@color/colorAccent"
+                android:layout_gravity="center_horizontal"
+                android:visibility="gone"/>
+    </LinearLayout>
+
+
+</androidx.cardview.widget.CardView>

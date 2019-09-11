@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#fff</color>
+    <color name="colorPrimaryDark">#fff</color>
+    <color name="colorAccent">#A070F5</color>
+    <color name="colorwhite">#fff</color>
+    <color name="colordeepblue">#673AB7</color>
+    <color name="colordeepink">#D81B60</color>
+    <color name="colorblack">#88000000</color>
+    <color name="colorgray">#72000000</color>
+    <color name="coloredit">@color/colordeepblue</color>
+    <color name="colorred">@android:color/holo_red_dark</color>
+
+    <color name="rippleEffectColor">#f816a463</color>
+    <color name="btnSignIn">#1fbad6</color>
+    <color name="btnRegister">#83838c</color>
+    <color name="baseReleaseColor">#212121</color>
+    <color name="basePressColor">#FAFAFA</color>
+    <color name="ballReleaseColor">#9E9E9E</color>
+    <color name="colorForth">#FFC107</color>
+    <color name="colorDivider">#1F000000</color>
+    <color name="colorBlack">#000</color>
+</resources>

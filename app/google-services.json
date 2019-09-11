@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "762879188541",
+    "firebase_url": "https://pickndrop-eb327.firebaseio.com",
+    "project_id": "pickndrop-eb327",
+    "storage_bucket": "pickndrop-eb327.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:762879188541:android:2a40320ba29bf87b",
+        "android_client_info": {
+          "package_name": "com.prosenjit.pickndrop"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "762879188541-291chb7tjb28hkm4ge1pirp1ipfv1ir8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDMiMgNayRuRApkNq1O1hb93lbaZMHQoUc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "762879188541-291chb7tjb28hkm4ge1pirp1ipfv1ir8.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

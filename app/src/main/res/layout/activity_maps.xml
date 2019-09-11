@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout  xmlns:android="http://schemas.android.com/apk/res/android"
+                 xmlns:tools="http://schemas.android.com/tools"
+                 xmlns:map="http://schemas.android.com/apk/res-auto"
+                 android:layout_width="match_parent"
+                 android:layout_height="match_parent">
+    <RelativeLayout android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_above="@+id/rl_address"
+                    android:id="@+id/rl_main">
+        <androidx.cardview.widget.CardView android:layout_width="match_parent"
+                                           android:layout_margin="10dp"
+                                           map:cardCornerRadius="10dp"
+                                           map:cardElevation="5dp"
+                                           android:layout_height="60dp"
+                                           android:visibility="gone">
+            <RelativeLayout android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:padding="10dp"
+                            android:visibility="visible">
+                <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/img_setting"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        map:srcCompat="@drawable/ic_iconfinder_exit_3855614"
+                        android:tint="@color/colorBlack"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"/>
+                <TextView
+                        android:layout_toRightOf="@+id/img_search"
+                        android:layout_toLeftOf="@+id/img_setting"
+                        android:layout_centerVertical="true"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        android:text="where to drop ?"
+                        android:textSize="15dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/img_search"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        map:srcCompat="@drawable/ic_search"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"/>
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+        <fragment
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/map"
+                android:name="com.google.android.gms.maps.SupportMapFragment"/>
+        <ImageView
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:layout_centerInParent="true"
+                android:id="@+id/imgPinUp"
+                android:src="@mipmap/location_pin"
+                android:visibility="gone" />
+    </RelativeLayout>
+   <LinearLayout android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:layout_alignParentBottom="true"
+                   android:orientation="vertical"
+                   android:id="@+id/rl_address"
+                  android:layout_marginBottom="10dp">
+       <androidx.cardview.widget.CardView android:layout_width="match_parent"
+                                          map:cardCornerRadius="10dp"
+                                          android:layout_margin="5dp"
+                                          map:cardElevation="1dp"
+                                          android:layout_height="wrap_content"
+                                          android:id="@+id/cv_pickup"
+                                          android:visibility="visible">
+           <LinearLayout android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:padding="10dp"
+                         android:orientation="vertical">
+               <TextView android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                        android:textColor="@color/colordeepblue"
+                         android:text="Pick Up Location"
+                       android:textStyle="bold"/>
+               <TextView android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:id="@+id/tv_pickUpLocation"
+                         android:textColor="@color/colorBlack"
+                         android:textSize="15dp"
+                         android:text=""
+                         android:maxLines="1"
+                         android:ellipsize="end"
+                         android:textStyle="normal"/>
+           </LinearLayout>
+       </androidx.cardview.widget.CardView>
+       <androidx.cardview.widget.CardView android:layout_width="match_parent"
+                                          map:cardCornerRadius="10dp"
+                                          android:layout_margin="5dp"
+                                          map:cardElevation="1dp"
+                                          android:layout_height="wrap_content"
+                                          android:visibility="visible"
+                                          android:id="@+id/cv_drop"
+                                          android:layout_marginTop="10dp">
+           <LinearLayout android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:padding="10dp"
+                         android:orientation="vertical">
+               <TextView android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:textColor="@android:color/holo_red_light"
+                         android:text="Select Drop Location"
+                         android:textStyle="bold"/>
+               <TextView android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:textColor="@android:color/holo_red_light"
+                         android:maxLines="1"
+                         android:ellipsize="end"
+                         android:textSize="15dp"
+                         android:text=""
+                         android:id="@+id/tv_drop"
+                         android:textStyle="normal"/>
+           </LinearLayout>
+       </androidx.cardview.widget.CardView>
+   </LinearLayout>
+</RelativeLayout>
